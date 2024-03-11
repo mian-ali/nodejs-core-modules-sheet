@@ -1,2 +1,4 @@
-# nodejs-core-modules-sheet
-This repository aims to provide concise and informative cheat sheets for the core modules available in Node.js. Whether you're a beginner getting started with Node.js or an experienced developer looking for quick references, you'll find handy summaries and examples here.
+# NodeJs Core Modules
+Node.js core modules are a set of modules that come bundled with the Node.js runtime environment. These modules provide essential functionality for building various types of applications, ranging from web servers to command-line utilities. Core modules are included in Node.js by default, so you don't need to install them separately using a package manager like npm.
+
+<p> Some common examples of Node.js core modules include</p>
