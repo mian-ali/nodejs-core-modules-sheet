@@ -109,3 +109,77 @@ isAbsolute('C:\\foo\\..'); // true
 isAbsolute('bar\\baz'); // false
 isAbsolute('bar/baz'); // false
 isAbsolute('.'); // false`
+
+## OS Module
+### Operating System Module
+
+The `os` module provides operating system-related utility methods and properties.
+
+```javascript
+const os = require('os');
+
+or using ES6 syntax:
+import * as os from 'os';
+```
+
+**platform()** - Returns a string identifying the operating system platform. The value is set at compile time. Possible values are `aix`, `darwin`, `freebsd`, `linux`, `openbsd`, `sunos`, and `win32`.
+
+**arch()** - Returns the operating system CPU architecture for which the Node.js binary was compiled. Possible values are `arm`, `arm64`, `ia32`, `mips`, `mipsel`, `ppc`, `ppc64`, `s390`, `s390x`, `x32`, and `x64`.
+
+**cpus()** - Returns an array of objects containing information about each logical CPU core.
+
+**hostname()** - Returns the host name of the operating system as a string.
+**hostname()** - Returns the string path of the current user's home directory.
+
+**networkInterfaces()** - Returns an object containing network interfaces that have been assigned a network
+address.
+
+**freemem()** - Returns the amount of free system memory in bytes as an integer.
+
+**totalmem()** - Returns the total amount of system memory in bytes as an integer.
+
+## URL Module
+
+# URL Module
+
+The `url` module provides utilities for URL resolution and parsing.
+
+```javascript
+const url = require('url');
+or using ES6 syntax:
+
+import url from 'url';
+```
+
+```javascript
+Example usage:
+
+const myURL = new URL('https://www.example.com:8080/p/a/t/h?query=string#hash');
+
+```
+
+**hash()** - Gets and sets the fragment portion of the URL.
+
+**host()** - Gets and sets the host portion of the URL.
+
+**hostname()** - Gets and sets the host name portion of the URL. The key difference between` url.host` and `url.hostnam`e is that `url.hostname` does not include the port.
+
+**href()** - Gets and sets the serialized URL.
+
+**PORT()** - Gets and sets the port portion of the URL.
+
+**protocol()** - Gets and sets the protocol portion of the URL.
+
+**search()** - Gets and sets the serialized query portion of the URL.
+
+**toString()** - The toString() method on the URL object returns the serialized URL. The value returned is
+equivalent to that of url.href and url.toJSON().
+
+**toJSON()** -  The toJSON() method on the URL object returns the serialized URL. The value returned is
+equivalent to that of url.href and url.toString().
+
+
+
+
+
+
