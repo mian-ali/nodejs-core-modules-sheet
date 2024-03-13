@@ -218,3 +218,125 @@ Syntax:- resolve(hostname, rrtype, callback)
 | 'SOA'  | Start Of Authority Records      |
 | 'SRV'  | Service Records                 |
 | 'TXT'  | Text Records                    |
+
+
+## FS (File System)
+
+The `fs` module enables interacting with the file system in a way modeled on standard POSIX functions.
+
+- **Promise Based API**
+  - `const fs = require('fs/promises');`
+  - `import * as fs from 'fs/promises';`
+
+- **Callback API**
+  - `const fs = require('fs');`
+  - `import as fs from 'fs';`
+
+- **Sync API**
+  - `const fs = require('fs');`
+  - `import * as fs from 'fs';`
+# Promise API
+
+The `fs/promises` API provides asynchronous file system methods that return promises.
+
+- **mkdir()**
+  - Asynchronously creates a directory.
+  - **Syntax:** `mkdir(path[, options])`
+
+- **readdir()**
+  - Reads the contents of a directory.
+  - **Syntax:** `readdir(path[, options])`
+
+- **rmdir()**
+  - Removes the directory identified by path.
+  - **Syntax:** `rmdir(path[, options])`
+
+- **writeFile()**
+  - Asynchronously writes data to a file, replacing the file if it already exists.
+
+- **readFile()**
+  - Asynchronously reads the entire contents of a file.
+  - **Syntax:** `readFile(path[, options])`
+
+- **appendFile()**
+  - Asynchronously append data to a file, creating the file if it does not yet exist.
+  - **Syntax:** `appendFile(path, data[, options])`
+
+- **copyFile()**
+  - Asynchronously copies src to dest. By default, dest is overwritten if it already exists.
+  - **Syntax:** `copyFile(src, dest[, mode])`
+
+- **stat()**
+  - Used to get file information.
+  - **Syntax:** `stat(path[, options])`
+
+  # Callback API
+
+The callback APIs perform all operations asynchronously, without blocking the event loop, then invoke a callback function upon completion or error.
+
+- **mkdir()**
+  - Asynchronously creates a directory.
+  - **Syntax:** `mkdir(path[, options], callback)`
+
+- **readdir()**
+  - Reads the contents of a directory.
+  - **Syntax:** `readdir(path[, options], callback)`
+
+- **rmdir()**
+  - Removes the directory identified by path.
+  - **Syntax:** `rmdir(path[, options], callback)`
+
+- **writeFile()**
+  - Asynchronously writes data to a file, replacing the file if it already exists.
+  - **Syntax:** `writeFile(file, data[, options], callback)`
+
+- **readFile()**
+  - Asynchronously reads the entire contents of a file.
+  - **Syntax:** `readFile(path[, options], callback)`
+
+- **appendFile()**
+  - Asynchronously append data to a file, creating the file if it does not yet exist.
+  - **Syntax:** `appendFile(path, data[, options], callback)`
+
+- **copyFile()**
+  - Asynchronously copies src to dest. By default, dest is overwritten if it already exists.
+  - **Syntax:** `copyFile(src, dest[, mode], callback)`
+
+- **stat()**
+  - Used to get file information.
+  - **Syntax:** `stat(path[, options], callback)`
+
+  # Synchronous API
+
+The synchronous APIs perform all operations synchronously, blocking the event loop until the operation completes or fails.
+
+- **mkdirSync()**
+  - Synchronously creates a directory.
+  - **Syntax:** `mkdirSync(path[, options])`
+
+- **readdirSync()**
+  - Reads the contents of a directory.
+  - **Syntax:** `readdirSync(path[, options])`
+
+- **rmdirSync()**
+  - Removes the directory identified by path.
+  - **Syntax:** `rmdirSync(path[, options])`
+
+- **writeFileSync()**
+  - Synchronously writes data to a file, replacing the file if it already exists.
+  - **Syntax:** `writeFileSync(file, data[, options])`
+- **readFileSync()**
+  - Synchronously reads the entire contents of a file.
+  - **Syntax:** `readFileSync(path[, options])`
+
+- **appendFileSync()**
+  - Synchronously append data to a file, creating the file if it does not yet exist.
+  - **Syntax:** `appendFileSync(path, data[, options])`
+
+- **copyFileSync()**
+  - Synchronously copies src to dest. By default, dest is overwritten if it already exists.
+  - **Syntax:** `copyFileSync(src, dest[, mode])`
+
+- **statSync()**
+  - Used to get file information.
+  - **Syntax:** `statSync(path[, options])`
