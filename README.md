@@ -340,3 +340,32 @@ The synchronous APIs perform all operations synchronously, blocking the event lo
 - **statSync()**
   - Used to get file information.
   - **Syntax:** `statSync(path[, options])`
+
+  ## Cluster Module
+
+  Clusters of Node.js processes can be used to run multiple instances of Node.js that can distribute workloads among their application threads. When process isolation is not needed, use the worker_threads module instead, which allows running multiple application threads within a single Node.js instance.
+
+  - Code Snipt:
+
+  ```javascript
+const express = require('express');
+const cluster = require('node:cluster');
+const os = require('os');
+const app = express();
+
+const myTotalCores = os.cpus().length;
+if (cluster.isPrimary) {
+    // Fork workers.
+    for (let i = 0; i < myTotalCores; i++) {
+        cluster.fork();
+    }
+} else {
+    app.get('/', (req, res) => {
+        res.json({ message: `Hello world ${process.pid}` });
+    });
+    
+    app.listen(5000, () => {
+        console.log('Server is running on port 5000');
+    });
+}
+```
